@@ -2,51 +2,52 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { FlaskRound, Atom, BookOpen } from 'lucide-react';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Icon: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Enterprise Security',
-    Svg: require('@site/static/img/undraw_security.svg').default,
+    title: 'Modern Synthesis',
+    Icon: FlaskRound,
     description: (
       <>
-        Renocrypt provides enterprise-grade security solutions designed to protect
-        your most valuable assets and data.
+        Comprehensive guides on modern synthetic methodologies, 
+        from classic reactions to cutting-edge catalytic processes.
       </>
     ),
   },
   {
-    title: 'Advanced Technology',
-    Svg: require('@site/static/img/undraw_technology.svg').default,
+    title: 'Computational Chemistry',
+    Icon: Atom,
     description: (
       <>
-        Built on cutting-edge technology, Renocrypt delivers innovative solutions
-        for modern security challenges.
+        Advanced computational approaches to chemical problems,
+        featuring modern molecular modeling and prediction tools.
       </>
     ),
   },
   {
-    title: 'Developer-First',
-    Svg: require('@site/static/img/undraw_developer.svg').default,
+    title: 'Academic Excellence',
+    Icon: BookOpen,
     description: (
       <>
-        Comprehensive APIs and developer tools make integration seamless.
-        Start building secure applications today.
+        Curated by PhD chemists and developers, bridging the gap
+        between traditional chemistry and modern technology.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Icon className={styles.featureSvg} aria-hidden="true" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

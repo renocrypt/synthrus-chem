@@ -14,14 +14,16 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          [SYNTHRUS]//
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          Advanced Chemistry Documentation for the Modern Era
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Get Started with Renocrypt →
+            Explore Chemistry Docs →
           </Link>
         </div>
       </div>
@@ -33,8 +35,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Welcome to [SYNTHRUS]//`}
+      description="Modern chemistry documentation and resources for college-level audience">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

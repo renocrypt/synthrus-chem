@@ -6,6 +6,13 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 56px;
+  width: 56px;
+  stroke-width: 1.5px;
+  color: var(--ifm-color-primary);
+  transition: transform 0.3s ease;
+}
+
+.featureSvg:hover {
+  transform: scale(1.1);
 }
