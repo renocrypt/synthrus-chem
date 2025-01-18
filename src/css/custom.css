@@ -6,25 +6,38 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Soft violet-blue palette for light mode */
+  --ifm-color-primary: #6b7fd7;        /* Main brand color */
+  --ifm-color-primary-dark: #4f66cf;   /* For hover states */
+  --ifm-color-primary-darker: #425bcc;  /* For active states */
+  --ifm-color-primary-darkest: #2c44aa; /* For borders */
+  --ifm-color-primary-light: #8798df;   /* For highlights */
+  --ifm-color-primary-lighter: #94a3e2; /* For subtle backgrounds */
+  --ifm-color-primary-lightest: #bec7ed; /* For very light backgrounds */
+  
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f6f8ff;
+  
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(107, 127, 215, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Lighter pastel palette for dark mode */
+  --ifm-color-primary: #a3b0e8;        /* Main brand color */
+  --ifm-color-primary-dark: #8395e1;   /* For hover states */
+  --ifm-color-primary-darker: #7387dd;  /* For active states */
+  --ifm-color-primary-darkest: #435dd3; /* For borders */
+  --ifm-color-primary-light: #c3cbef;   /* For highlights */
+  --ifm-color-primary-lighter: #d3d8f2; /* For subtle backgrounds */
+  --ifm-color-primary-lightest: #f3f5fc; /* For very light backgrounds */
+  
+  --ifm-background-color: #1a1c2c;
+  --ifm-navbar-background-color: #1a1c2c;
+  --ifm-footer-background-color: #151724;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(163, 176, 232, 0.2);
 }
+
