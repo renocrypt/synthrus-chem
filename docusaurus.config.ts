@@ -80,7 +80,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Content',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -97,13 +97,13 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Content',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'More',
           items: [
             {
               label: 'Stack Overflow',
@@ -120,7 +120,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Beyond Docs',
           items: [
             {
               label: 'Blog',
