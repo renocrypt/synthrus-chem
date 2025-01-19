@@ -1,0 +1,31 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment on push to the main branch
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Match the `engines.node` version in package.json
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Static Site
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
