@@ -40,7 +40,7 @@ Before delving into R/S configuration, it's essential to have a solid understand
    - Identification of asymmetric carbons
 
 :::tip
-Having a firm grasp of these topics will significantly facilitate your understanding of R/S configuration and its application in organic chemistry. If you need to review any of these concepts, we recommend visiting our [Basic Organic Chemistry](/docs/category/basics) section first.
+Having a firm grasp of these topics will significantly facilitate your understanding of R/S configuration and its application in organic chemistry. If you need to review any of these concepts, we recommend visiting our section first.
 :::
 
 ## The Cahn-Ingold-Prelog (CIP) Rules
