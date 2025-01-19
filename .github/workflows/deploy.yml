@@ -3,7 +3,7 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger deployment on push to the main branch
+      - main # Deploy when changes are pushed to the main branch
   workflow_dispatch: # Allow manual triggering
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Match the `engines.node` version in package.json
+          node-version: 18 # Match the Node.js version in package.json engines
 
       - name: Install Dependencies
         run: npm install
@@ -27,5 +27,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER: ${{ github.actor }} # Use the GitHub Actions user
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Authentication token
         run: npm run deploy
