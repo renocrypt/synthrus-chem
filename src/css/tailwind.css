@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that should come after Tailwind */
+@layer utilities {
+  .prose {
+    max-width: 100%;
+  }
+}

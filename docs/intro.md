@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# [SYN]THRUS and Some Chemistry
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **[SYN]THRUS in less than 5 minutes**.
 
 ## Getting Started
 

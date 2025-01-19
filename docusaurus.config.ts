@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/renocrypt',
         },
         // blog: {
         //   showReadingTime: true,
@@ -58,7 +58,9 @@ const config: Config = {
         //   onUntruncatedBlogPosts: 'warn',
         // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -78,9 +80,9 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Content',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/renocrypt/renocrypt-docs',
           label: 'GitHub',
@@ -95,13 +97,13 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Content',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'More',
           items: [
             {
               label: 'Stack Overflow',
@@ -118,7 +120,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Beyond Docs',
           items: [
             {
               label: 'Blog',
