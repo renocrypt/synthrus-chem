@@ -25,7 +25,9 @@ function HomepageHeader() {
   };
 
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header
+      className={clsx("hero bg-slate-200 dark:bg-slate-500", styles.heroBanner)}
+    >
       <div className="container">
         <Heading
           as="h1"
