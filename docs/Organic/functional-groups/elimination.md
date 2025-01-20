@@ -9,6 +9,7 @@ hide_table_of_contents: false
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Mermaid from '@theme/Mermaid';
 
 
 > Elimination reactions are **fundamental processes** in organic chemistry where a molecule loses two substituents to form a multiple bond, such as a double or triple bond. These reactions are indispensable in **organic synthesis**, enabling the creation of alkenes and alkynes, which are key building blocks in a variety of chemical and industrial applications.
@@ -129,13 +130,13 @@ Elimination reactions often compete with substitution reactions (SN1 and SN2).
 ### Zaitsev's Rule
 The major product is the more substituted alkene.
 
-```mermaid
-graph TD;
+<Mermaid
+  value={`graph TD;
     A-->B;
     A-->C;
     B-->D;
-    C-->D;
-```
+    C-->D;`}
+/>
 
 ```mermaid
 graph LR

@@ -1,31 +1,28 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Synthrus',
+  title: 'SYNTHRUS',
   tagline: 'Advanced Chemistry Documentation for the Modern Era',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://renocrypt.com',
+  url: 'https://renocrypt.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/synthrus-chem/', // Match the repository name here
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'renocrypt', // Usually your GitHub org/user name.
-  projectName: 'renocrypt-docs', // Usually your repo name.
+  organizationName: 'renocrypt', // GitHub username or org name
+  projectName: 'synthrus-chem', // Repository name
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,35 +34,18 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/renocrypt/synthrus-chem/edit/main/', // Match your GitHub repo structure
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [require.resolve('./src/css/custom.css')],
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/renocrypt-social-card.jpg',
     navbar: {
       title: 'Synthrus',
@@ -78,11 +58,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Content',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/renocrypt/renocrypt-docs',
+          href: 'https://github.com/renocrypt/synthrus-chem',
           label: 'GitHub',
           position: 'right',
         },
@@ -95,13 +75,13 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Content',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'More',
           items: [
             {
               label: 'Stack Overflow',
@@ -118,7 +98,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Beyond Docs',
           items: [
             {
               label: 'Blog',
@@ -126,7 +106,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/renocrypt/renocrypt-docs',
+              href: 'https://github.com/renocrypt/synthrus-chem',
             },
           ],
         },
@@ -138,6 +118,20 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 };
 
 export default config;
