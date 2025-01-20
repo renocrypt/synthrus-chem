@@ -2,7 +2,7 @@
   "label": "Organic Chemistry",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "Organic Chemistry"
+    "type": "doc",
+    "id": "Organic/index"
   }
 }
