@@ -7,14 +7,20 @@ tags: ["Organic Chemistry", "Elimination Reactions", "E1", "E2", "Reaction Mecha
 hide_table_of_contents: false
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 > Elimination reactions are **fundamental processes** in organic chemistry where a molecule loses two substituents to form a multiple bond, such as a double or triple bond. These reactions are indispensable in **organic synthesis**, enabling the creation of alkenes and alkynes, which are key building blocks in a variety of chemical and industrial applications.
 
 ---
 
-## 🧪 Types of Elimination Reactions
+## 🧪 Basic Elimination Reactions
 
 Elimination reactions can proceed through two primary mechanisms: **E1 (Elimination Unimolecular)** and **E2 (Elimination Bimolecular)**. These mechanisms differ in their kinetics, stereochemical requirements, and reaction conditions.
+
+<Tabs>
+<TabItem value="E1" label="E1 Mechanism">
 
 ### 🔍 E1 Mechanism: Elimination Unimolecular
 
@@ -28,7 +34,44 @@ The **E1 mechanism** unfolds in two distinct steps:
    - A base abstracts a proton (β-hydrogen) from the adjacent carbon atom.
    - The electrons from the broken C–H bond form the π bond, creating the alkene.
 
-$$alplh$$
+:::tip Key Characteristics of E1
+- **First-Order Kinetics**: The reaction rate depends only on the concentration of the substrate:
+  $$
+  \text{Rate} = k[\text{Substrate}]
+  $$
+- **Favored by Polar Protic Solvents**: These solvents stabilize the carbocation intermediate and assist in ionization of the leaving group.
+- **Carbocation Rearrangement Possible**: If a more stable carbocation can form via hydride or alkyl shifts, the reaction will proceed through that pathway.
+- **Regioselectivity (Zaitsev's Rule)**: The major product is the more substituted alkene due to its higher thermodynamic stability.
+- **Common in Weak Base Conditions**: Weak bases like water or alcohols are often sufficient.
+:::
+
+</TabItem>
+
+<TabItem value="E2" label="E2 Mechanism">
+
+### 🔍 E2 Mechanism: Elimination Bimolecular
+
+The **E2 mechanism** occurs in a single, concerted step:
+
+1. **Simultaneous Bond-Breaking and Bond-Forming**:
+   - The base abstracts a β-hydrogen at the same time that the leaving group departs.
+   - The electrons from the β-C–H bond are used to form the π bond, resulting in the alkene product.
+
+:::info Important Features of E2
+- **Second-Order Kinetics**: The reaction rate depends on both the substrate and base concentrations:
+  $$
+  \text{Rate} = k[\text{Substrate}][\text{Base}]
+  $$
+- **Anti-Periplanar Geometry Required**: The β-hydrogen and the leaving group must be in opposite planes (coplanar but anti-aligned) to allow proper orbital overlap for π bond formation.
+- **Stereospecificity**: The geometry of the substrate determines the stereochemistry of the product (e.g., E or Z alkene).
+- **Favored by Strong Bases**: Bases like $$ \text{OH}^- $$, $$ \text{OR}^- $$, or bulky bases such as $$ \text{t-BuOK} $$ promote E2 mechanisms.
+- **Less Likely to Rearrange**: Since no carbocation intermediate is formed, rearrangements do not occur.
+- **Versatility in Substrates**: E2 reactions can occur with primary, secondary, or tertiary substrates, provided steric hindrance does not impede the base.
+:::
+
+</TabItem>
+</Tabs>
+
 
 ### ⚖️ Comparison of E1 vs. E2 Mechanisms
 
@@ -43,12 +86,12 @@ $$alplh$$
 
 ---
 
-### 💡 Did You Know?
-
+:::tip Note
 - **E1 and E2 Competition**: Tertiary substrates often favor E1 in polar protic solvents due to easier carbocation formation. However, in the presence of strong bases, E2 dominates.
 - **Zaitsev's Rule in Both Mechanisms**: While E1 strictly follows Zaitsev's rule due to thermodynamic control, E2 reactions may deviate if bulky bases (like tert-butoxide) are used, favoring the less substituted product (Hofmann product).
+:::
 
-## Factors Affecting Elimination Reactions
+## Factors Affecting E1 & E2
 
 ### 1. Substrate Structure
 - Primary vs. Secondary vs. Tertiary substrates
@@ -86,7 +129,15 @@ Elimination reactions often compete with substitution reactions (SN1 and SN2).
 ### Zaitsev's Rule
 The major product is the more substituted alkene.
 
-```mermaid:docs/Organic/functional-groups/elimination.md
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```mermaid
 graph LR
     A[Substrate] --> B[Major Product: More Substituted]
     A --> C[Minor Product: Less Substituted]
