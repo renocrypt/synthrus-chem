@@ -28,31 +28,7 @@ The **E1 mechanism** unfolds in two distinct steps:
    - A base abstracts a proton (β-hydrogen) from the adjacent carbon atom.
    - The electrons from the broken C–H bond form the π bond, creating the alkene.
 
-:::tip Key Characteristics of E1
-- **First-Order Kinetics**: The reaction rate depends only on the concentration of the substrate \((\text{Rate} = k[\text{Substrate}])\).
-- **Favored by Polar Protic Solvents**: These solvents stabilize the carbocation intermediate and assist in ionization of the leaving group.
-- **Carbocation Rearrangement Possible**: If a more stable carbocation can form via hydride or alkyl shifts, the reaction will proceed through that pathway.
-- **Regioselectivity (Zaitsev's Rule)**: The major product is the more substituted alkene due to its higher thermodynamic stability.
-- **Common in Weak Base Conditions**: Weak bases like water or alcohols are often sufficient.
-:::
-
-
-### 🔍 E2 Mechanism: Elimination Bimolecular
-
-The **E2 mechanism** occurs in a single, concerted step:
-
-1. **Simultaneous Bond-Breaking and Bond-Forming**:
-   - The base abstracts a β-hydrogen at the same time that the leaving group departs.
-   - The electrons from the β-C–H bond are used to form the π bond, resulting in the alkene product.
-
-:::info Important Features of E2
-- **Second-Order Kinetics**: The reaction rate depends on both the substrate and base concentrations \((\text{Rate} = k[\text{Substrate}][\text{Base}])\).
-- **Anti-Periplanar Geometry Required**: The β-hydrogen and the leaving group must be in opposite planes (coplanar but anti-aligned) to allow proper orbital overlap for π bond formation.
-- **Stereospecificity**: The geometry of the substrate determines the stereochemistry of the product (e.g., E or Z alkene).
-- **Favored by Strong Bases**: Bases like \( \text{OH}^- \), \( \text{OR}^- \), or bulky bases such as \( \text{t-BuOK} \) promote E2 mechanisms.
-- **Less Likely to Rearrange**: Since no carbocation intermediate is formed, rearrangements do not occur.
-- **Versatility in Substrates**: E2 reactions can occur with primary, secondary, or tertiary substrates, provided steric hindrance does not impede the base.
-:::
+$$alplh$$
 
 ### ⚖️ Comparison of E1 vs. E2 Mechanisms
 
