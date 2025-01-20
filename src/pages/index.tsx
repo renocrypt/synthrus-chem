@@ -6,6 +6,8 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import { useScrollPosition } from "../hooks/useScrollPosition";
+import { AnimatedText } from '../components/AnimatedText';
+import { motion } from 'framer-motion';
 
 import styles from "./index.module.css";
 
@@ -13,39 +15,38 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   const scrollPosition = useScrollPosition();
 
-  // Calculate text based on scroll position
-  const getHeadingText = () => {
-    if (scrollPosition < 30) {
-      return "[SYNTHRUS]//";
-    } else if (scrollPosition < 100) {
-      return "[SYN]//";
-    } else {
-      return "//renocrypt";
-    }
-  };
-
   return (
     <header
       className={clsx("hero bg-slate-200 dark:bg-slate-500", styles.heroBanner)}
     >
       <div className="container">
-        <Heading
-          as="h1"
-          className="hero__title transition-all duration-300 ease-in-out"
-        >
-          {getHeadingText()}
+        <Heading as="h1">
+          <AnimatedText 
+            scrollPosition={scrollPosition}
+            className="hero__title"
+          />
         </Heading>
-        <p className="hero__subtitle">
+        <motion.p
+          className="hero__subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           Advanced Chemistry Documentation for the Modern Era
-        </p>
-        <div className={styles.buttons}>
+        </motion.p>
+        <motion.div 
+          className={styles.buttons}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Explore Chemistry Docs →
+            Explore [SYNTH]RUS →
           </Link>
-        </div>
+        </motion.div>
       </div>
     </header>
   );
