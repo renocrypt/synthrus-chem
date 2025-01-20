@@ -11,6 +11,7 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
+  perspective: 1000px;
 }
 
 @media screen and (max-width: 996px) {
@@ -24,4 +25,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Add these new styles */
+:global(.hero__title) {
+  text-shadow: 0 0 10px var(--ifm-color-primary-lighter);
+  letter-spacing: 0.05em;
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 10px var(--ifm-color-primary-lighter); }
+  50% { text-shadow: 0 0 20px var(--ifm-color-primary-light); }
+}
+
+:global(.hero__title:hover) {
+  animation: textGlow 2s ease-in-out infinite;
 }
