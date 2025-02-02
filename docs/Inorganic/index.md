@@ -1,6 +1,6 @@
 ---
-title: Understanding Inorganic Chemistry
-description: Comprehensive guide to inorganic chemistry fundamentals, covering atomic structure, chemical bonding, coordination compounds, and main group elements.
+title: Inorganic Chemistry
+description: Short guide to inorganic chemistry fundamentals, covering atomic structure, chemical bonding, coordination compounds, and main group elements.
 keywords: [inorganic chemistry, atomic structure, chemical bonding, coordination compounds, transition metals, main group elements, molecular symmetry]
 slug: /inorganic-chemistry
 sidebar_position: 1
