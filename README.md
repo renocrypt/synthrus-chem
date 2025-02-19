@@ -12,7 +12,7 @@ Advanced Chemistry Documentation for the Modern Era
 
 </div>
 
-## 🌟 Features
+## 🌟 Some Features
 
 - 📚 Comprehensive organic chemistry documentation
 - 🔬 Modern synthesis methodologies
