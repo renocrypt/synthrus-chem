@@ -14,7 +14,7 @@ Advanced Chemistry Documentation for the Modern Era
 
 ## 🌟 Some Features
 
-- 📚 Comprehensive organic chemistry documentation
+- 📚 Organic chemistry documentation
 - 🔬 Modern synthesis methodologies
 - 💻 Computational chemistry approaches
 - 🎓 Academic-focused content
