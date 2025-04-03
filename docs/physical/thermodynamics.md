@@ -1,5 +1,3 @@
-Okay, let's construct the materials for Module I, focusing on rigorous derivation and conceptual clarity for advanced students.
-
 **Module I: Foundational Rigor & The Thermodynamic Machinery**
 
 **Objective:** To establish a rigorous mathematical and conceptual framework for thermodynamics, moving beyond introductory treatments to emphasize the postulational basis, the interconnectedness of thermodynamic variables via the fundamental equation and its transforms, and the power of this machinery for relating properties.
