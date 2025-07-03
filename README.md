@@ -1,4 +1,4 @@
-# [SYN]THRUS 🧪
+# [SYN]THRUS 🧪.
 
 <div align="center">
 
